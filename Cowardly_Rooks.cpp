@@ -11,14 +11,14 @@ int main()
         int x = m;
         while (m--)
         {
-            int a, b;
-            cin >> a >> b;
+            int x, y;
+            cin >> x >> y;
         }
-        if (x == n)
+        if (n > x)
         {
-            cout << "NO" << endl;
+            cout << "YES" << endl;
         }
         else
-            cout << "YES" << endl;
+            cout << "NO" << endl;
     }
 }
