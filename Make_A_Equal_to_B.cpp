@@ -8,14 +8,26 @@ int main()
     {
         int n;
         cin >> n;
-        int ar[n], arr[n];
+        int a[n + 1], b[n + 1];
+        int c1 = 0, c2 = 0;
         for (int i = 0; i < n; i++)
         {
-            cin >> ar[n];
+            cin >> a[i];
+            if (a[i])
+                c1++;
         }
         for (int i = 0; i < n; i++)
         {
-            cin >> arr[n];
+            cin >> b[i];
+            if (b[i])
+                c2++;
         }
+        int cnt = 0;
+        for (int i = 0; i < n; i++)
+        {
+            if (a[i] != b[i])
+                cnt++;
+        }
+        cout << min(cnt, abs(c1 - c2) + 1) << endl;
     }
 }
